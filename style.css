@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --White: hsl(0, 0%, 100%); /*board background*/
+    --Very-light-grayish-blue: hsl(210, 60%, 98%); /*main background + active notification background*/
+    --Light-grayish-blue-1: hsl(211, 68%, 94%); /**/
+    --Light-grayish-blue-2: hsl(205, 33%, 90%); /**/
+    --Grayish-blue: hsl(219, 14%, 63%); /**/
+    --Dark-grayish-blue: hsl(219, 12%, 42%); /**/
+    --Very-dark-blue: hsl(224, 21%, 14%);  /* user name*/
+    --Red: hsl(1, 90%, 64%); /**/
+    --Blue: hsl(219, 85%, 26%); /**/
+}
+body{
+    min-height: 100vh;
+    background: var(--Very-light-grayish-blue);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body main{
+    background: var(--White);
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+}
+main header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+header h1{
+    font-size: 1.5rem;
+}
+header button{
+    background: transparent;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border: none;
+}
+main a{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    line-height: 1.3;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+a.unread{
+    background: var(--Very-light-grayish-blue);
+}
+a img{
+    width: 40px;
+    height: 40px;
+}
+a .text-content p{
+    color: var(--Dark-grayish-blue);
+}
+p .user{
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+    margin-right: .2rem;
+}
+p .activity{
+    font-weight: 800;
+    margin: 0 .2rem;
+}
+p .dot{
+    display: inline-block;
+    background: var(--Red);
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    margin-left: .1rem;
+}
+.text-content .time{
+    color: var(--Grayish-blue);
+    margin-top: .1rem;
+}
+.text-content .private{
+    border: 1px solid var(--Light-grayish-blue-2);
+    border-radius: .3rem;
+    padding: 1rem;
+    margin-top: .5rem;
+}
+footer{
+    font-size: .7rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+footer a{
+    color: var(--Blue);
+}
+footer a:hover{
+    text-decoration: none;
+}
