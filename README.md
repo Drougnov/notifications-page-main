@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [yet to add](https://your-solution-url.com)
-- Live Site URL: [https://drougnov.github.io/notifications-page-main/](https://drougnov.github.io/notifications-page-main/)
+- Live Site URL: [https://notification-page-main.netlify.app/](https://notification-page-main.netlify.app/)
 
 ## My process
 
