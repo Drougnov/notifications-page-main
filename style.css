@@ -6,19 +6,19 @@
     box-sizing: border-box;
 }
 :root{
-    --White: hsl(0, 0%, 100%); /*board background*/
-    --Very-light-grayish-blue: hsl(210, 60%, 98%); /*main background + active notification background*/
-    --Light-grayish-blue-1: hsl(211, 68%, 94%); /**/
-    --Light-grayish-blue-2: hsl(205, 33%, 90%); /**/
-    --Grayish-blue: hsl(219, 14%, 63%); /**/
-    --Dark-grayish-blue: hsl(219, 12%, 42%); /**/
-    --Very-dark-blue: hsl(224, 21%, 14%);  /* user name*/
-    --Red: hsl(1, 90%, 64%); /**/
-    --Blue: hsl(219, 85%, 26%); /**/
+    --body-bg: hsl(210, 60%, 98%);
+    --board-bg: hsl(0, 0%, 100%);
+    --primary-text: hsl(219, 12%, 42%);
+    --user-name: hsl(224, 21%, 14%);
+    --time-text: hsl(219, 14%, 63%);
+    --count-text: hsl(211, 68%, 94%);
+    --msg-border: hsl(205, 33%, 90%);
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
 }
 body{
     min-height: 100vh;
-    background: var(--Very-light-grayish-blue);
+    background: var(--body-bg);
     font-size: 14px;
     font-weight: 500;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -28,7 +28,8 @@ body{
     align-items: center;
 }
 body main{
-    background: var(--White);
+    max-width: 620px;
+    background: var(--board-bg);
     padding: 1.5rem 1rem;
     border-radius: 1rem;
 }
@@ -39,12 +40,20 @@ main header{
     margin-bottom: 1.5rem;
 }
 header h1{
-    font-size: 1.5rem;
+    font-size: 20px;
+}
+header h1 .count{
+    color: var(--count-text);
+    background: var(--blue);
+    border-radius: .5rem;
+    padding: .01rem .5rem;
 }
 header button{
+    color: var(--primary-text);
     background: transparent;
     font-size: 14px;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
     border: none;
     cursor: pointer;
 }
@@ -59,17 +68,17 @@ main a{
     margin: 1rem 0;
 }
 a.unread{
-    background: var(--Very-light-grayish-blue);
+    background: var(--body-bg);
 }
 a img{
     width: 40px;
     height: 40px;
 }
 a .text-content p{
-    color: var(--Dark-grayish-blue);
+    color: var(--primary-text);
 }
 p .user{
-    color: var(--Very-dark-blue);
+    color: var(--user-name);
     font-weight: 800;
     margin-right: .2rem;
 }
@@ -77,23 +86,29 @@ p .activity{
     font-weight: 800;
     margin: 0 .2rem;
 }
+p .chess{
+    color: var(--blue);
+}
 p .dot{
     display: inline-block;
-    background: var(--Red);
+    background: var(--red);
     width: .5rem;
     height: .5rem;
     border-radius: 50%;
     margin-left: .1rem;
 }
 .text-content .time{
-    color: var(--Grayish-blue);
+    color: var(--time-text);
     margin-top: .1rem;
 }
 .text-content .private{
-    border: 1px solid var(--Light-grayish-blue-2);
+    border: 1px solid var(--msg-border);
     border-radius: .3rem;
     padding: 1rem;
     margin-top: .5rem;
+}
+a .picture{
+    margin-left: auto;
 }
 footer{
     font-size: .7rem;
@@ -101,8 +116,14 @@ footer{
     margin-bottom: 1rem;
 }
 footer a{
-    color: var(--Blue);
+    color: var(--blue);
 }
 footer a:hover{
     text-decoration: none;
+}
+
+@media(min-width: 620px){
+    body main{
+        margin: 3rem 0;
+    }
 }
