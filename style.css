@@ -11,8 +11,8 @@
     --primary-text: hsl(219, 12%, 42%);
     --user-name: hsl(224, 21%, 14%);
     --time-text: hsl(219, 14%, 63%);
-    --count-text: hsl(211, 68%, 94%);
-    --msg-border: hsl(205, 33%, 90%);
+    --count-text: hsl(205, 33%, 90%);
+    --msg-border: hsl(211, 68%, 94%);
     --red: hsl(1, 90%, 64%);
     --blue: hsl(219, 85%, 26%);
 }
@@ -57,6 +57,9 @@ header button{
     border: none;
     cursor: pointer;
 }
+button:hover{
+    color: var(--blue);
+}
 main a{
     display: flex;
     align-items: flex-start;
@@ -97,6 +100,9 @@ p .dot{
     border-radius: 50%;
     margin-left: .1rem;
 }
+p span:hover{
+    color: var(--blue);
+}
 .text-content .time{
     color: var(--time-text);
     margin-top: .1rem;
@@ -106,6 +112,9 @@ p .dot{
     border-radius: .3rem;
     padding: 1rem;
     margin-top: .5rem;
+}
+.text-content .private:hover{
+    background: var(--count-text);
 }
 a .picture{
     margin-left: auto;
