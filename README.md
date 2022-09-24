@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [yet to add](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/notifications-page-solution-responsive-mobile-first-myRmvrfd1Z](https://www.frontendmentor.io/solutions/notifications-page-solution-responsive-mobile-first-myRmvrfd1Z)
 - Live Site URL: [https://notification-page-main.netlify.app/](https://notification-page-main.netlify.app/)
 
 ## My process
