@@ -46,6 +46,7 @@ header button{
     font-size: 14px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     border: none;
+    cursor: pointer;
 }
 main a{
     display: flex;
