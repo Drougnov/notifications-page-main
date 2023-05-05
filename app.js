@@ -29,6 +29,7 @@ markAllAsRead.addEventListener('click',()=>{
     countSpan.textContent = 0;
     unread.forEach(elem =>{
         elem.classList.remove('unread');
+        removeDots(elem);
     })
-    removeDots(elem);
+    // removeDots(elem);    Should be inside the forEach loop
 })
