@@ -1,5 +1,5 @@
 let count = 3;
-const unread = document.querySelectorAll('.unread');
+let unread = document.querySelectorAll('.unread');
 const plural = document.querySelector('.plural');
 const countSpan = document.querySelector('.count');
 const markAllAsRead = document.querySelector('.mark-all-read');
@@ -22,14 +22,14 @@ unread.forEach(elem => {
         removeDots(elem);
         count--;
         manageCount(count);
+        unread = document.querySelectorAll('.unread')
     })
 })
 
-markAllAsRead.addEventListener('click',()=>{
+markAllAsRead.addEventListener('click', () => {
     countSpan.textContent = 0;
-    unread.forEach(elem =>{
+    unread.forEach(elem => {
         elem.classList.remove('unread');
         removeDots(elem);
     })
-    // removeDots(elem);    Should be inside the forEach loop
 })
